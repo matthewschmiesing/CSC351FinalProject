@@ -1,0 +1,46 @@
+.navigationBar {
+    top: 0; /* Position the navigation bar at the top */
+    position: fixed; /* Make the navigation bar fixed */
+    width: 100%; /* Set width to 100% of viewport */
+    height: 5%;
+    left: 50%; /* Align left edge to the center */
+    transform: translateX(-50%); /* Center the navigation bar */;
+    padding: 10px; /* Add padding */
+    background-color: #D8D8D8; /* Timberwolf background */
+    display: flex; /* Use flexbox for layout */
+    justify-content: left; /* left navigation items */
+    align-items: center; /* Vertically align items */
+}
+
+.navBarRow {
+    padding-left: 10%; /* Add padding to the left */
+    padding-right: 10%; /* Add padding to the right */
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Add space between items */
+    margin-left: 10px;
+}
+
+main {
+    margin-top: 5%;
+}
+
+body {
+    background-color: #FFFFEA;
+}
+
+h1 {
+    color: #Fe6f5e;
+}
+
+h2 {
+    color: #Fe6f5e;
+}
+
+h3 {
+    color: #Fe6f5e;
+}
+
+h4 {
+    color: #Fe6f5e;
+}
+
