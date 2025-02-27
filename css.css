@@ -1,15 +1,17 @@
 .navigationBar {
-    top: 0; /* Position the navigation bar at the top */
+    top: 0;
+    left: 0; /* Position the navigation bar at the top */
     position: fixed; /* Make the navigation bar fixed */
-    width: 100%; /* Set width to 100% of viewport */
-    height: 5%;
-    left: 50%; /* Align left edge to the center */
-    transform: translateX(-50%); /* Center the navigation bar */;
-    padding: 10px; /* Add padding */
+    width: 100vw; /* Set width to 100% of viewport */
+    height: 8vh;
+    margin-left: 0;
     background-color: #D8D8D8; /* Timberwolf background */
     display: flex; /* Use flexbox for layout */
     justify-content: left; /* left navigation items */
     align-items: center; /* Vertically align items */
+    border: solid;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .navBarRow {
@@ -17,30 +19,156 @@
     padding-right: 10%; /* Add padding to the right */
     display: flex; /* Use flexbox for layout */
     gap: 20px; /* Add space between items */
-    margin-left: 10px;
+    
 }
 
 main {
-    margin-top: 5%;
+    margin-top: 10vh;
 }
 
 body {
     background-color: #FFFFEA;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden
 }
 
 h1 {
     color: #Fe6f5e;
+    font-size: 4vw;
 }
 
 h2 {
     color: #Fe6f5e;
 }
 
+.bloggerBox h2{
+    color: #000000;
+    font-size: 200%;
+}
+
+.bloggerBox img {
+    max-width: 60%; /* Prevents overflow */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra space below the image */
+    border: solid black;
+    border-radius: 10px;
+}
+
+
 h3 {
     color: #Fe6f5e;
+    margin-left: 2vw;
 }
 
 h4 {
     color: #Fe6f5e;
+}
+
+
+.leftA {
+    width: 50%;
+}
+
+.rightA {
+    width: 50%;
+}
+
+.leftB {
+    width: 40%;
+}
+
+.rightB {
+    width: 60%;
+}
+  
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cardRow {
+    display: flex;
+    gap: 20px;
+}
+
+.center {
+    text-align: center; /* Center-align text */
+    margin: auto; /* Center content horizontally */
+    justify-content: center;
+    align-content: center;
+}
+
+.recipeCardSection {
+    justify-content: center;
+}
+
+footer {
+    background-color: #Fe6f5e;
+    justify-content: center;
+    width: 100vw;
+    margin-left: 0;
+}
+
+.sectionA {
+    margin:10px
+}
+
+.titleAndIntro {
+    margin-left: 2vw;
+    width: 50vw;
+}
+
+.bloggerBox {
+    background-color: #Fe6f5e;
+    border: solid;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+    height: 70vh;
+    width: 600px ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Centers content vertically (if height is set) */
+    text-align: center;
+}
+
+.bloggerBox div {
+    display: flex;
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: center; /* Center them horizontally */
+}
+
+
+
+.recipeCardBox {
+    background-color: #D8D8D8;
+    padding: 40px;
+    border: solid;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+    height: 30vh;
+    width: 40vw ;
+    margin-left: 2vw;
+    margin-bottom: 3vh;
+    display: flex;
+    
+
+}
+
+.recipeCardBox .imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* This makes sure the image takes up the available space */
+}
+
+.recipeCardBox img {
+    width: 100%;
+    height: auto;
+    border: solid black;
+    border-radius: 10px;
+
 }
 

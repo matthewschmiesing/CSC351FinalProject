@@ -1,54 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Final Project</title>
-    <link rel="stylesheet" href="css.css">
-</head>
-<body>
+
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
     <header>
-        <div class="navigationBar navBarRow">
-            <nav>
-                <a href="homepage.html">Home</a>
-                <a href="">Recipe Listings</a>
-                <a href="favoritespage.html">Favorites</a>
-                <a href="">About</a>
-            </nav>
-        </div>
+      <div class="navigationBar navBarRow">
+        <nav>
+          <a href="homepage.html">Home</a>
+          <a href="">Recipe Listings</a>
+          <a href="favoritespage.html">Favorites</a>
+          <a href="">About</a>
+        </nav>
+      </div>
     </header>
     <main>
-        <section>
-            <div>
-                <h1>Title Of Webpage</h1>
-                <p>Little Paragraph Under the Title</p>
+      <section class="row sectionA">
+        <div class="leftA titleAndIntro">
+          <h1>Grandma's CookBook</h1>
+          <p>Little Paragraph Under the Title</p>
+        </div>
+        <div class="rightA bloggerBox">
+          <div>
+            <h2>Grandma Nava</h2>
+            <img src="grandma.png" alt="Blogger Image" />
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <div>
+            <div class="leftA">
+                <h3>Title For Row of Cards</h3>
             </div>
-            <div>
-                <h2>Title for Image of Blogger</h2>
-                <img src="" alt="Blogger Image">
-            </div>
-        </section>
-        <section>
-            <div>
-                <div>
-                    <h3>Title For Row of Cards</h3>
-                </div>
-                <div>
-                    <div>
+            <div class="recipeCardSection">
+                <div class="row">
+                    <div class="cardRow recipeCardBox">
+                        <div class="leftB">
+                        <h4>Bacon</h4>
+                        <p>Description of Card</p>
+                        </div>
+                        <div class="rightB imageWrapper">
+                        <img src="bacon.jpg" alt="Image of Card" />
+                        </div>
+                    </div>
+                    <div class="cardRow recipeCardBox">
+                        <div class="leftB">
                         <h4>Title of Card</h4>
                         <p>Description of Card</p>
+                        </div>
+                        <div class="rightB">
+                        <img src="" alt="Image of Card" />
+                        </div>
                     </div>
-                    <div>
-                        <img src="" alt="Image of Card">
+                </div>
+                <div class="row">
+                    <div class="leftA cardRow recipeCardBox">
+                        <div class="leftB">
+                        <h4>Title of Card</h4>
+                        <p>Description of Card</p>
+                        </div>
+                        <div class="rightB">
+                        <img src="" alt="Image of Card" />
+                        </div>
+                    </div>
+                    <div class="rightA cardRow recipeCardBox">
+                        <div class="leftB">
+                        <h4>Title of Card</h4>
+                        <p>Description of Card</p>
+                        </div>
+                        <div class="rightB">
+                        <img src="" alt="Image of Card" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-        <h5>Team 5</h5>
-        <h5>GitHub Link to Project</h5>
-        <h5>Credit</h5>
+    <footer class="row">
+      <h5>Team 5</h5>
+      <h5>GitHub Link to Project</h5>
+      <h5>Credit</h5>
     </footer>
-</body>
+  </body>
 </html>
