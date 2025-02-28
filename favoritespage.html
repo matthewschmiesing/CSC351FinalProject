@@ -7,57 +7,94 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
-    <header>
-        <div class="navigationBar navBarRow">
-            <nav>
-                <a href="homepage.html">Home</a>
-                <a href="">Recipe Listings</a>
-                <a href="favoritespage.html">Favorites</a>
-                <a href="">About</a>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="navigationBar navBarRow">
+        <nav>
+            <a href="homepage.html" class="navLinks">Home</a>
+            <a href="" class="navLinks">Recipe Listings</a>
+            <a href="favoritespage.html" class="navLinks">Favorites</a>
+            <a href="" class="navLinks">About</a>
+          </nav>
+          <div class="row">
+            <input type="datetime-local" id="timePicker">
+            <div class="navLinks">
+              <button class='timerButton' id="startButton">Start</button>
+            </div >
+            <div class="navLinks">
+              <button class='timerButton' id="pauseButton">Pause</button>
+            </div>
+            <div class="navLinks">
+              <button class='timerButton' id="resetButton">Reset</button>
+            </div>
+            <div class="timerFont" id="demo">00d 00h 00m 00s</div>
+          </div>
+    </div>
+</header>
     <main>
-        <h1>Favorites Page</h1>
+        <h1 class="center">Favorites</h1>
         <section>
             <div>
                 <div>
-                    <h3>Title For Row of Cards</h3>
+                    <h3>Recipe Cards</h3>
                 </div>
-                <div class="row">
-                    <div class="leftA">
-                        <h4>Title of Card</h4>
-                        <p>Description of Card</p>
+                <div class="recipeCardSection">
+                    <div class="row">
+                      <a href="recipeDetails.html" class="cardLink">
+                        <div class="cardRow recipeCardBox">
+                            <div class="leftB">
+                                <h4>Bacon</h4>
+                                <p>Description of Card</p>
+                            </div>
+                            <div class="rightB imageWrapper">
+                                <img src="bacon.jpg" alt="Image of Card" />
+                            </div>
+                        </div>
+                      </a>
+                      <a href="recipeDetails.html" class="cardLink">
+                        <div class="cardRow recipeCardBox">
+                            <div class="leftB">
+                              <h4>Potato</h4>
+                              <p>Description of Card</p>
+                            </div>
+                            <div class="rightB imageWrapper">
+                            <img src="potato.jpg" alt="Image of Card" />
+                            </div>
+                        </div>
+                      </a>
                     </div>
-                    <div class="rightA">
-                        <img src="" alt="Image of Card">
+                    <div class="row">
+                      <a href="recipeDetails.html" class="cardLink">
+                        <div class="leftA cardRow recipeCardBox">
+                            <div class="leftB">
+                            <h4>CheeseBurger</h4>
+                            <p>Description of Card</p>
+                            </div>
+                            <div class="rightB imageWrapper">
+                            <img src="burger.jpg" alt="Image of Card" />
+                            </div>
+                        </div>
+                      </a>
+                      <a href="recipeDetails.html" class="cardLink">
+                        <div class="rightA cardRow recipeCardBox">
+                            <div class="leftB">
+                            <h4>Water</h4>
+                            <p>Description of Card</p>
+                            </div>
+                            <div class="rightB imageWrapper">
+                            <img src="water.jpg" alt="Image of Card" />
+                            </div>
+                        </div>
+                      </a>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <h4>Title of Card</h4>
-                        <p>Description of Card</p>
-                    </div>
-                    <div>
-                        <img src="" alt="Image of Card">
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <h4>Title of Card</h4>
-                        <p>Description of Card</p>
-                    </div>
-                    <div>
-                        <img src="" alt="Image of Card">
-                    </div>
-                </div>
+              </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="row">
         <h5>Team 5</h5>
-        <h5>GitHub Link to Project</h5>
+        <h5><a href="https://github.com/matthewschmiesing/CSC351FinalProject">GitHub Link to Project</a></h5>
         <h5>Credit</h5>
-    </footer>
+      </footer>
 </body>
 </html>

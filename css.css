@@ -1,17 +1,22 @@
+* {
+    font-family:'Playfair Display', serif; /* Set default font */
+}
+
 .navigationBar {
     top: 0;
     left: 0; /* Position the navigation bar at the top */
     position: fixed; /* Make the navigation bar fixed */
-    width: 100vw; /* Set width to 100% of viewport */
-    height: 8vh;
+    width: 100%; /* Set width to 100% of viewport */
+    height: auto;
     margin-left: 0;
     background-color: #D8D8D8; /* Timberwolf background */
     display: flex; /* Use flexbox for layout */
-    justify-content: left; /* left navigation items */
-    align-items: center; /* Vertically align items */
+    /* justify-content: left; */
+    align-items: center; 
     border: solid;
     border-radius: 0 0 10px 10px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
 }
 
 .navBarRow {
@@ -22,6 +27,54 @@
     
 }
 
+
+.navLinks {
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* Set text color to black */
+    font-size: 130%; /* Increase font size */
+    padding: 10px; /* Add padding inside links */
+}
+
+.navLinks:hover {
+    color: #Fe6f5e;
+}
+
+nav {
+    display: flex;
+}
+
+.navButton {
+    background-color: rgb(255, 255, 255); /* White background for buttons */
+    font-size: 90%; /* Set smaller font size */
+    border: none; /* Remove border */
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('digital-7-mono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.timerFont {
+    font-family: 'CustomFont', sans-serif;
+    color: rgb(0, 0, 0); /* Set text color to black */
+    font-size: 140%; /* Increase font size */
+    padding: 10px; /* Add padding inside links */
+
+}
+
+.timerButton {
+    border: solid black;
+    background-color: #Fe6f5e;
+    font-size: 110%;
+    border-radius: 10px;
+}
+
+.timerButton:hover {
+    background-color: grey;
+}
+
 main {
     margin-top: 10vh;
 }
@@ -30,7 +83,7 @@ body {
     background-color: #FFFFEA;
     margin: 0;
     padding: 0;
-    overflow-x: hidden
+    /* overflow-x: hidden */
 }
 
 h1 {
@@ -86,6 +139,7 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    align-items: center;
 }
 
 .cardRow {
@@ -118,6 +172,17 @@ footer {
 .titleAndIntro {
     margin-left: 2vw;
     width: 50vw;
+}
+
+.titleAndIntro p {
+    line-height: 200%;
+    max-width: 90%;
+    font-size: 120%;
+    text-align: center;
+}
+
+.titleAndIntro h1 { 
+    margin-left: 45px;
 }
 
 .bloggerBox {
@@ -157,6 +222,25 @@ footer {
 
 }
 
+.recipeCardBox:hover {
+    box-shadow: 0 2px #000000;
+    transform: translateY(2px);
+}
+
+/* .recipeCardBox:active {
+    box-shadow: 0 2px #000000;
+    transform: translateY(2px);
+} */
+
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+
+
 .recipeCardBox .imageWrapper {
     display: flex;
     justify-content: center;
@@ -171,4 +255,15 @@ footer {
     border-radius: 10px;
 
 }
+
+
+
+
+
+
+
+
+
+/* Favorites Specific */
+
 
