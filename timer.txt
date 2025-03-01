@@ -1,0 +1,19 @@
+<div class="row">
+            <label for="hoursInput">Hours:</label>
+            <input type="number" id="hoursInput" min="0" placeholder="0">
+            <label for="minutesInput">Minutes:</label>
+            <input type="number" id="minutesInput" min="0" placeholder="0">
+            <div class="navLinks">
+                <button class='timerButton' id="startButton">Start</button>
+            </div>
+            <div class="navLinks">
+                <button class='timerButton' id="pauseButton">Pause</button>
+            </div>
+            <div class="navLinks">
+                <button class='timerButton' id="resetButton">Reset</button>
+            </div>
+            <div class="timerFont" id="demo">
+                00h 00m 00s
+            </div>
+        </div>
+

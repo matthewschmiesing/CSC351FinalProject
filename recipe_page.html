@@ -3,37 +3,22 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css.css">
         </head>
         <body>
             <header>
                 <div class="navigationBar">
-                    <nav>
-                        <a href="homepage.html" class="navLinks">Home</a>
-                        <a href="" class="navLinks">Recipe Listings</a>
-                        <a href="favoritespage.html" class="navLinks">Favorites</a>
-                        <a href="" class="navLinks">About</a>
-                    </nav>
-                    <div class="row">
-                        <label for="hoursInput">Hours:</label>
-                        <input type="number" id="hoursInput" min="0" placeholder="0">
-                        <label for="minutesInput">Minutes:</label>
-                        <input type="number" id="minutesInput" min="0" placeholder="0">
-                        <div class="navLinks">
-                            <button class='timerButton' id="startButton">Start</button>
-                        </div>
-                        <div class="navLinks">
-                            <button class='timerButton' id="pauseButton">Pause</button>
-                        </div>
-                        <div class="navLinks">
-                            <button class='timerButton' id="resetButton">Reset</button>
-                        </div>
-                        <div class="timerFont" id="demo">
-                            00h 00m 00s
-                        </div>
-                    </div>
-                </div>
+                  <nav>
+                      <a href="homepage.html" class="navLinks">Home</a>
+                      <a href="recipe_listing.html" class="navLinks">Recipe Listings</a>
+                      <a href="favoritespage.html" class="navLinks">Favorites</a>
+                      <a href="about.html" class="navLinks">About</a>
+                  </nav>
+                  
+              </div>
+              
             </header>
+            <main>
             <div class="recipe-page">
                 <div class="recipe-main">
                     <div class="recipe-title"><h3>Garlic Butter Herb Steak with Roasted Vegetables</h3></div>
@@ -76,8 +61,13 @@
                     <label><input type="checkbox" name="filter" value="gluten_free">Salt and pepper to taste</label><br>
                 </div>
             </div>
+            </main>
+
+            <footer class="row">
+                <h5>Team 5</h5>
+                <h5><a href="https://github.com/matthewschmiesing/CSC351FinalProject">GitHub Link to Project</a></h5>
+                <h5>Credit</h5>
+              </footer>
         </body>
-        <footer>
-            <div class="foot">Team 5</div>
-        </footer>
+        
 </html>

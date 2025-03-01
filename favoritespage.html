@@ -8,29 +8,18 @@
 </head>
 <body>
   <header>
-    <div class="navigationBar navBarRow">
-        <nav>
-            <a href="homepage.html" class="navLinks">Home</a>
-            <a href="" class="navLinks">Recipe Listings</a>
-            <a href="favoritespage.html" class="navLinks">Favorites</a>
-            <a href="" class="navLinks">About</a>
-          </nav>
-          <div class="row">
-            <input type="datetime-local" id="timePicker">
-            <div class="navLinks">
-              <button class='timerButton' id="startButton">Start</button>
-            </div >
-            <div class="navLinks">
-              <button class='timerButton' id="pauseButton">Pause</button>
-            </div>
-            <div class="navLinks">
-              <button class='timerButton' id="resetButton">Reset</button>
-            </div>
-            <div class="timerFont" id="demo">00d 00h 00m 00s</div>
-          </div>
-    </div>
+    <div class="navigationBar">
+      <nav>
+          <a href="homepage.html" class="navLinks">Home</a>
+          <a href="recipe_listing.html" class="navLinks">Recipe Listings</a>
+          <a href="favoritespage.html" class="navLinks">Favorites</a>
+          <a href="about.html" class="navLinks">About</a>
+      </nav>
+      
+  </div>
+  
 </header>
-    <main>
+  <main>
         <h1 class="center">Favorites</h1>
         <section>
             <div>
@@ -39,14 +28,16 @@
                 </div>
                 <div class="recipeCardSection">
                     <div class="row">
-                      <a href="recipeDetails.html" class="cardLink">
+                      <a href="recipe_page.html" class="cardLink">
                         <div class="cardRow recipeCardBox">
                             <div class="leftB">
-                                <h4>Bacon</h4>
-                                <p>Description of Card</p>
+                                <h4>Garlic Butter Herb Steak with Roasted Vegetables</h4>
+                                <p>Garlic Butter Herb Steak with Roasted Vegetables is a rich and flavorful dish featuring tender, 
+                                  seared steak coated in a savory garlic butter sauce infused with fresh herbs. Served alongside perfectly 
+                                  roasted vegetables, this hearty meal balances bold, buttery flavors with a touch of caramelized sweetness.</p>
                             </div>
                             <div class="rightB imageWrapper">
-                                <img src="bacon.jpg" alt="Image of Card" />
+                                <img src="steak.jpg" alt="Image of Card" />
                             </div>
                         </div>
                       </a>
@@ -97,4 +88,5 @@
         <h5>Credit</h5>
       </footer>
 </body>
+<script src="cookingTimer.js" defer></script>
 </html>
