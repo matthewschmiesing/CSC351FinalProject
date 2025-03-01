@@ -1,0 +1,205 @@
+.navigationBar {
+    top: 0;
+    left: 0; /* Position the navigation bar at the top */
+    position: fixed; /* Make the navigation bar fixed */
+    width: 100%; /* Set width to 100% of viewport */
+    height: auto;
+    margin-left: 0;
+    background-color: #D8D8D8; /* Timberwolf background */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around;
+    align-items: center; 
+    border: solid;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+}
+
+.navBarRow {
+    padding-left: 10%; /* Add padding to the left */
+    padding-right: 10%; /* Add padding to the right */
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Add space between items */
+    
+}
+
+
+.navLinks {
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* Set text color to black */
+    font-size: 130%; /* Increase font size */
+    padding: 10px; /* Add padding inside links */
+}
+
+.navLinks:hover {
+    color: #Fe6f5e;
+}
+
+nav {
+    display: flex;
+}
+
+.navButton {
+    background-color: rgb(255, 255, 255); /* White background for buttons */
+    font-size: 90%; /* Set smaller font size */
+    border: none; /* Remove border */
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('digital-7-mono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.timerFont {
+    font-family: 'CustomFont', sans-serif;
+    color: rgb(0, 0, 0); /* Set text color to black */
+    font-size: 140%; /* Increase font size */
+    padding: 10px; /* Add padding inside links */
+
+}
+
+.timerButton {
+    border: solid black;
+    background-color: #Fe6f5e;
+    font-size: 110%;
+    border-radius: 10px;
+}
+
+.timerButton:hover {
+    background-color: grey;
+}
+
+main {
+    margin-top: 10vh;
+}
+
+body {
+    background-color: #FFFFEA;
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden */
+}
+
+h1 {
+    color: #Fe6f5e;
+    font-size: 4vw;
+}
+
+h2 {
+    color: #Fe6f5e;
+}
+
+.title{
+    margin-left:20%;
+}
+
+.listing-content{
+    display:inline-block;
+    width:100%;
+}
+
+.listing-main{
+    display: inline-block;
+    width: 70%;
+    vertical-align:top;
+
+}
+
+.listing-side{
+    display: inline-block;
+    margin-left:3%;
+    margin-top: 8%;
+    width:25%;
+    vertical-align: top;
+}
+
+.main-search{
+    margin-top: 50px;
+}
+
+#large-search{
+    display: inline-block;
+    width:97%;
+    border:1px solid black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.recipe-list{
+    margin:30px;
+    margin-left: 0px;
+}
+
+.recipe-line{
+    width: 100%;
+    margin: 10px;
+    margin-left: 0px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+
+.filter-list{
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 10px;
+    width:95%;
+}
+
+.filter{
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin:5px;
+}
+
+.search-bar{
+    margin-left: 300px;
+}
+
+.recipe-page{
+    display: inline-block;
+    margin-top:10px;
+}
+
+.recipe-main{
+    display: inline-block;
+    margin:10px;
+    width:70%;
+    vertical-align: top;
+}
+
+.recipe-title{
+    text-align: center;
+
+}
+
+.recipe-picture{
+    margin-left:25%;
+}
+
+.recipe-details{
+    text-align: center;
+    margin:20px;
+}
+
+.recipe-content{
+    line-height: 25px;
+}
+
+.recipe-side{
+    border: 1px solid black;
+    border-radius:10px;
+    display: inline-block;
+    width:25%;
+    vertical-align: top;
+    margin-top:10px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}

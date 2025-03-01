@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="navigationBar">
+                <nav>
+                    <a href="homepage.html" class="navLinks">Home</a>
+                    <a href="" class="navLinks">Recipe Listings</a>
+                    <a href="favoritespage.html" class="navLinks">Favorites</a>
+                    <a href="" class="navLinks">About</a>
+                </nav>
+                <div class="row">
+                    <label for="hoursInput">Hours:</label>
+                    <input type="number" id="hoursInput" min="0" placeholder="0">
+                    <label for="minutesInput">Minutes:</label>
+                    <input type="number" id="minutesInput" min="0" placeholder="0">
+                    <div class="navLinks">
+                        <button class='timerButton' id="startButton">Start</button>
+                    </div>
+                    <div class="navLinks">
+                        <button class='timerButton' id="pauseButton">Pause</button>
+                    </div>
+                    <div class="navLinks">
+                        <button class='timerButton' id="resetButton">Reset</button>
+                    </div>
+                    <div class="timerFont" id="demo">
+                        00h 00m 00s
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="listing-content">
+            <div class="listing-main">
+                <div class="main-search">
+                    <label for="large-search">Search</label>
+                    <input type="text" id="large-search" name="large-search">
+                </div>
+                <div class="recipe-list">
+                    <div class="recipe-line">pasta</div>
+                    <div class="recipe-line">brownies</div>
+                    <div class="recipe-line">chicken parm</div>
+                    <div class="recipe-line">meatballs</div>
+                    <div class="recipe-line">lasagna</div>
+                    <div class="recipe-line">loaded baked potato</div>
+                </div>
+            </div>
+            <div class="listing-side">
+                <div class="filter-list">
+                    <label><input type="checkbox" name="filter" value="vegan"> Vegan</label><br>
+                    <label><input type="checkbox" name="filter" value="lactose_free"> Lactose Free</label><br>
+                    <label><input type="checkbox" name="filter" value="high_protein"> High Protein</label><br>
+                    <label><input type="checkbox" name="filter" value="low_carb"> Low Carb</label><br>
+                    <label><input type="checkbox" name="filter" value="gluten_free"> Gluten Free</label><br>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="foot">Team 5</div>
+    </footer>
+</html>
