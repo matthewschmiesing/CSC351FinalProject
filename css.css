@@ -217,7 +217,9 @@ footer {
 
 .recipeCardBox {
     background-color: #D8D8D8;
-    padding: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
     border: solid;
     border-radius: 20px;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
@@ -227,6 +229,7 @@ footer {
     margin-bottom: 3vh;
     display: flex;
     flex: 0 0 auto;
+    overflow: auto;
 }
 
 .recipeCardBox p {
@@ -240,6 +243,35 @@ footer {
 .recipeCardBox:hover {
     box-shadow: 0 2px #000000;
     transform: translateY(2px);
+}
+
+.like-container {
+    top: 10px;
+    right: 10px;
+}
+
+.like-btn {
+    color: black;
+    background: none;
+    border: black;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    transform: scale(1.2);
+}
+
+.like-btn.liked {
+    fill: red;
+    color: red;
+    transform: scale(1.6);
+}
+
+.leftC {
+    width: 95%;
+}
+
+.rightC {
+    width: 5%;
 }
 
 /* .recipeCardBox:active {
