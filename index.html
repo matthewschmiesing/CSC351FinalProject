@@ -6,6 +6,7 @@
     <title>Final Project</title>
 
     <link rel="stylesheet" href="css.css" />
+    <script src="jsFunctions/carousel.js"></script>
   </head>
   
   <body>
@@ -40,64 +41,31 @@
           </div>
         </div>
       </section>
-      <section class="row">
+      <section>
         <div>
             <div class="leftA">
                 <h3>Recipe Cards</h3>
             </div>
-            <div class="recipeCardSection">
-                <div class="row">
-                  <a href="recipe_page.html" class="cardLink">
-                    <div class="cardRow recipeCardBox">
-                        <div class="leftB">
-                            <h4>Garlic Butter Herb Steak with Roasted Vegetables</h4>
-                            <p>Garlic Butter Herb Steak with Roasted Vegetables is a rich and flavorful dish featuring tender, 
-                              seared steak coated in a savory garlic butter sauce infused with fresh herbs. Served alongside perfectly 
-                              roasted vegetables, this hearty meal balances bold, buttery flavors with a touch of caramelized sweetness.</p>
-                        </div>
-                        <div class="rightB imageWrapper">
-                            <img src="steak.jpg" alt="Image of Card" />
-                        </div>
-                    </div>
-                  </a>
-                  <a href="recipe_page.html" class="cardLink">
-                    <div class="cardRow recipeCardBox">
-                        <div class="leftB">
-                          <h4>Potato</h4>
-                          <p>Description of Card</p>
-                        </div>
-                        <div class="rightB imageWrapper">
-                        <img src="potato.jpg" alt="Image of Card" />
-                        </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="row">
-                  <a href="recipe_page.html" class="cardLink">
-                    <div class="leftA cardRow recipeCardBox">
-                        <div class="leftB">
-                        <h4>CheeseBurger</h4>
-                        <p>Description of Card</p>
-                        </div>
-                        <div class="rightB imageWrapper">
-                        <img src="burger.jpg" alt="Image of Card" />
-                        </div>
-                    </div>
-                  </a>
-                  <a href="recipe_page.html" class="cardLink">
-                    <div class="rightA cardRow recipeCardBox">
-                        <div class="leftB">
-                        <h4>Water</h4>
-                        <p>Description of Card</p>
-                        </div>
-                        <div class="rightB imageWrapper">
-                        <img src="water.jpg" alt="Image of Card" />
-                        </div>
-                    </div>
-                  </a>
-                </div>
+            <div class="leftA">
+              <h3>Breakfast Recipes</h3>
             </div>
-          </div>
+            <div class="recipeCardSection">
+              <div class="carousel-container">
+                <button class="carousel-btn prev-btn">&#10094;</button> <!-- Left Arrow -->
+                <div id="breakfastRecipes" class="carousel-track"></div>
+                <button class="carousel-btn next-btn">&#10095;</button> <!-- Right Arrow -->
+                <script type="module" src="jsJsonRetrieval/BreakfastRecipes.js"></script>
+              </div>
+              <div class="leftA">
+                <h3>Lunch Recipes</h3>
+              </div>
+              <div class="carousel-container">
+                <button class="carousel-btn prev-btn">&#10094;</button> <!-- Left Arrow -->
+                <div id="lunchRecipes" class="carousel-track"></div>
+                <button class="carousel-btn next-btn">&#10095;</button> <!-- Right Arrow -->
+                <script type="module" src="jsJsonRetrieval/LunchRecipes.js"></script>
+              </div>
+            </div> 
         </div>
       </section>
     </main>
