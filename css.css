@@ -17,6 +17,7 @@
     border-radius: 0 0 10px 10px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     flex-wrap: wrap;
+    z-index: 9999; /* Ensure it's on top */
 }
 
 .navBarRow {
@@ -128,11 +129,18 @@ h4 {
 }
 
 .leftB {
-    width: 40%;
+    width: 60%;
+}
+
+.leftB h4 {
+    max-width: 100%;
+    word-wrap: break-word;  /* Ensures long words break */
+    overflow-wrap: break-word;  /* Alternative for modern browsers */
+    white-space: normal 
 }
 
 .rightB {
-    width: 60%;
+    width: 40%;
 }
   
 .row {
@@ -140,12 +148,14 @@ h4 {
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
+    contain: content;
 }
 
 .cardRow {
     display: flex;
     gap: 20px;
 }
+
 
 .center {
     text-align: center; /* Center-align text */
@@ -198,7 +208,8 @@ footer {
     border-radius: 10px;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
     height: 70vh;
-    width: 600px ;
+    width: 40% ;
+    min-width: 400px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -216,25 +227,61 @@ footer {
 
 .recipeCardBox {
     background-color: #D8D8D8;
-    padding: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
     border: solid;
     border-radius: 20px;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
     height: 30vh;
-    width: 40vw ;
+    width: 30vw;
     margin-left: 2vw;
     margin-bottom: 3vh;
     display: flex;
-
+    flex: 0 0 auto;
+    overflow: auto;
 }
 
 .recipeCardBox p {
-    font-size: 90%;
+    font-size: 100%;
+}
+
+.recipeCardBox h4 {
+    font-size: 110%;
 }
 
 .recipeCardBox:hover {
     box-shadow: 0 2px #000000;
     transform: translateY(2px);
+}
+
+.like-container {
+    top: 10px;
+    right: 10px;
+}
+
+.like-btn {
+    color: black;
+    background: none;
+    border: black;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    transform: scale(1.2);
+}
+
+.like-btn.liked {
+    fill: red;
+    color: red;
+    transform: scale(1.6);
+}
+
+.leftC {
+    width: 95%;
+}
+
+.rightC {
+    width: 5%;
 }
 
 /* .recipeCardBox:active {
@@ -243,11 +290,14 @@ footer {
 } */
 
 .cardLink {
-    text-decoration: none;
+    text-decoration:none;
     color: inherit;
-    display: block;
+    
 }
 
+.cardLink:hover {
+    text-decoration: underline;
+}
 
 
 
@@ -258,12 +308,68 @@ footer {
     flex-grow: 1; /* This makes sure the image takes up the available space */
 }
 
+.recipeCardBox .imageWrapper img {
+    max-width: 100%;  /* Ensures the image doesn't exceed the wrapper's width */
+    max-height: 100%; /* Ensures the image doesn't exceed the wrapper's height */
+    object-fit: contain; /* Ensures the whole image is visible without cropping */
+}
+
 .recipeCardBox img {
-    width: 100%;
+    width: auto;
     height: auto;
     border: solid black;
     border-radius: 10px;
 
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px; /* Space between cards */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome/Safari */
+}
+
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 5px;
+}
+
+.next-btn {
+    right: 5px;
+}
+
+.imageWrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 
@@ -344,15 +450,13 @@ footer {
 }
 
 .recipe-page{
-    display: inline-block;
     margin-top:20px;
 
 }
 
 .recipe-main{
-    display: inline-block;
     margin:10px;
-    width:60%;
+    width:50%;
     vertical-align: top;
     background-color: #D8D8D8;
     padding: 40px;
@@ -362,6 +466,7 @@ footer {
     margin-left: 2vw;
     margin-bottom: 3vh;
     align-content: center;
+    contain: content;
 }
 
 .recipe-title{
@@ -371,6 +476,32 @@ footer {
 
 .recipe-picture{
     margin-left:30%;
+}
+
+.recipe-page-image-container {
+    width: 20vw;
+    height: auto;
+}
+
+.recipe-page-image-container img{
+    width: 100%;
+    height: auto;
+    border: solid black;
+    border-radius: 10px;
+    
+}
+
+.recipeCardBox .imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* This makes sure the image takes up the available space */
+}
+
+.recipeCardBox .imageWrapper img {
+    max-width: 100%;  /* Ensures the image doesn't exceed the wrapper's width */
+    max-height: 100%; /* Ensures the image doesn't exceed the wrapper's height */
+    object-fit: contain; /* Ensures the whole image is visible without cropping */
 }
 
 .recipe-details{
@@ -386,14 +517,13 @@ footer {
     border: 1px solid black;
     border-radius:10px;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
-    display: inline-block;
-    width:25%;
+    width:30%;
+    height: 100%;
+    min-height: 100px;
     vertical-align: top;
-    margin-top:10px;
+    margin:10px;
     padding-left: 5px;
     padding-bottom: 5px;
-
-
     background-color: #D8D8D8;
     padding: 40px;
     border: solid;
