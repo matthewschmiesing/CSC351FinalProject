@@ -52,7 +52,7 @@ function displayRecipes(recipes, containerId) {
     container.addEventListener("click", (event) => {
         if (event.target.classList.contains("clickable")) {
             const recipeId = event.target.dataset.recipeId;
-            window.location.href = `recipeDetails.html?id=${recipeId}`;
+            window.location.href = `recipe_page.html?id=${recipeId}`;
         }
     });
 

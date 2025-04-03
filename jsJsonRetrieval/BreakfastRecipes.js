@@ -25,7 +25,7 @@ function displayRecipes(recipes, containerId) {
                         <button class="like-btn" data-recipe-id="${recipe.id}">&#x2661</button>
                     </div>
                 </div>
-                <div class="cardRow">
+                <div class="cardRow clickable cardLink">
                     <div class="leftB">
                         <h4 class="clickable" data-recipe-id="${recipe.id}">${recipe.name}</h4>
                         <ul>
@@ -52,7 +52,7 @@ function displayRecipes(recipes, containerId) {
     container.addEventListener("click", (event) => {
         if (event.target.classList.contains("clickable")) {
             const recipeId = event.target.dataset.recipeId;
-            window.location.href = `recipeDetails.html?id=${recipeId}`;
+            window.location.href = `recipe_page.html?id=${recipeId}`;
         }
     });
 
