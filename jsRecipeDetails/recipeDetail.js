@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "recipe/snacks_recipes.json",
         "recipe/spring_recipes.json",
         "recipe/summer_recipes.json",
-        "recipe/fall_recipes.json",
+        "recipe/autumn_recipes.json",
         "recipe/winter_recipes.json"
 
     ];
