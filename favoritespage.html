@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project</title>
     <link rel="stylesheet" href="css.css">
+    <script type="module" src="favoritesPage/favoritesPage.js"></script>
 </head>
 <body>
   <header>
@@ -22,63 +23,8 @@
   <main>
         <h1 class="center">Favorites</h1>
         <section>
-            <div>
-                <div>
-                    <h3>Recipe Cards</h3>
-                </div>
-                <div class="recipeCardSection">
-                    <div class="row">
-                      <a href="recipe_page.html" class="cardLink">
-                        <div class="cardRow recipeCardBox">
-                            <div class="leftB">
-                                <h4>Garlic Butter Herb Steak with Roasted Vegetables</h4>
-                                <p>Garlic Butter Herb Steak with Roasted Vegetables is a rich and flavorful dish featuring tender, 
-                                  seared steak coated in a savory garlic butter sauce infused with fresh herbs. Served alongside perfectly 
-                                  roasted vegetables, this hearty meal balances bold, buttery flavors with a touch of caramelized sweetness.</p>
-                            </div>
-                            <div class="rightB imageWrapper">
-                                <img src="steak.jpg" alt="Image of Card" />
-                            </div>
-                        </div>
-                      </a>
-                      <a href="recipe_page.html" class="cardLink">
-                        <div class="cardRow recipeCardBox">
-                            <div class="leftB">
-                              <h4>Potato</h4>
-                              <p>Description of Card</p>
-                            </div>
-                            <div class="rightB imageWrapper">
-                            <img src="potato.jpg" alt="Image of Card" />
-                            </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="row">
-                      <a href="recipe_page.html" class="cardLink">
-                        <div class="leftA cardRow recipeCardBox">
-                            <div class="leftB">
-                            <h4>CheeseBurger</h4>
-                            <p>Description of Card</p>
-                            </div>
-                            <div class="rightB imageWrapper">
-                            <img src="burger.jpg" alt="Image of Card" />
-                            </div>
-                        </div>
-                      </a>
-                      <a href="recipe_page.html" class="cardLink">
-                        <div class="rightA cardRow recipeCardBox">
-                            <div class="leftB">
-                            <h4>Water</h4>
-                            <p>Description of Card</p>
-                            </div>
-                            <div class="rightB imageWrapper">
-                            <img src="water.jpg" alt="Image of Card" />
-                            </div>
-                        </div>
-                      </a>
-                    </div>
-                </div>
-              </div>
+            <div class="favorites-container">
+                  <div id="favoritesContainer" class="favorites-track"></div>
             </div>
         </section>
     </main>
