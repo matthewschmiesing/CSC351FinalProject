@@ -56,12 +56,55 @@ nav {
     font-style: normal;
 }
 
+.timerBox {
+    background-color: #D8D8D8;
+    padding: 30px 40px;
+    border: solid;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+    height: 50%;
+    width: 30vw;
+    margin-left: 2vw;
+    margin-bottom: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 250px;
+    gap: 10px;
+}
+
+.input-group label {
+    flex: 1;
+    font-weight: bold;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 .timerFont {
     font-family: 'CustomFont', sans-serif;
-    color: rgb(0, 0, 0); /* Set text color to black */
-    font-size: 140%; /* Increase font size */
-    padding: 10px; /* Add padding inside links */
-
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
 }
 
 .timerButton {
@@ -69,14 +112,18 @@ nav {
     background-color: #Fe6f5e;
     font-size: 110%;
     border-radius: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
 }
 
 .timerButton:hover {
     background-color: grey;
 }
 
+
 main {
     margin-top: 10vh;
+    flex: 1;
 }
 
 body {
@@ -167,10 +214,7 @@ footer {
     bottom: 0;
 }
 
-#footer {
-    position: absolute;
-    bottom: 0;
-  }
+
 
 .sectionA {
     margin:10px
@@ -353,15 +397,19 @@ footer {
     display: inline-block;
     margin:10px;
     width:60%;
+   /* width:50%;*/
+    height: auto;
     vertical-align: top;
     background-color: #D8D8D8;
-    padding: 40px;
+    padding: 0px 40px;
     border: solid;
     border-radius: 20px;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
     margin-left: 2vw;
     margin-bottom: 3vh;
     align-content: center;
+    contain: content;
+    font-size: 120%;
 }
 
 .recipe-title{
@@ -383,8 +431,10 @@ footer {
 }
 
 .recipe-side{
-    border: 1px solid black;
-    border-radius:10px;
+    background-color: #D8D8D8;
+    padding: 30px 40px;
+    border: solid;
+    border-radius: 20px;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
     display: inline-block;
     width:25%;
@@ -394,13 +444,45 @@ footer {
     padding-bottom: 5px;
 
 
-    background-color: #D8D8D8;
-    padding: 40px;
-    border: solid;
-    border-radius: 20px;
-    align-content: center;
+    height: 50%;
+    width: 30vw;
+    margin-left: 2vw;
+    margin-bottom: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    text-align: left;
 }
 
+.recipe-page-right {
+    height: 100%;
+    margin-bottom: 3vh;
+}
+
+
+.recipe-story {
+    width:95vw;
+    height: auto;
+    vertical-align: top;
+
+    background-color: #D8D8D8;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    border: solid;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+    margin-left: 2vw;
+    margin-bottom: 3vh;
+    align-content: center;
+    contain: content;
+    line-height: 200%;
+    font-size: 120%;
+    text-align: center;
+    
+}
 
 .aboutEdna p{
     align-content: center;
