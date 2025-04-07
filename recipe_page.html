@@ -3,8 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css.css">
-        <script src="jsRecipeDetails/recipeDetail.js"></script>
+        <link rel="stylesheet" href="scss/style.css" />
         </head>
         <body>
             <header>
@@ -19,27 +18,47 @@
               </div>
               
             </header>
-            <main class="">
-            <div class="recipe-page row">
-                <div class="recipe-main leftA">
-                    <div class="row">
-                        <div class="leftA">
-                            <h3 id="recipeName" class="recipe-title"></h3>
-                            <div class="row"><h3>Category:</h3><p id="category"></p></div>
-                            <div class="row"><h3>Dietary:</h3><p id="dietary"></p></div>
-                            <div class="row"><h3>Season:</h3><p id="season"></p></div>
-                            <div class="row"><h3>Cuisine:</h3><p id="cuisine"></p></div>
-                            <div class="row"><h3>Difficulty:</h3><p id="difficulty"></p></div>
-                            <div class="row"><h3>Prep Time:</h3><p id="prep_time"></p></div>
-                        </div>
-                        <div class="">
-                            <div class="recipe-page-image-container center"><img id="image" src=""></div>
-                        </div>
-                    </div>
-                    <div id="recipeSteps" class="recipe-content"></div>
+            <main>
+            <div class="recipe-page">
+                <div class="recipe-main">
+                    <div class="recipe-title"><h3>Garlic Butter Herb Steak with Roasted Vegetables</h3></div>
+                    <div class="recipe-picture"><img src="steak.jpg" width="400" height="200"></div>
+                    <div class="recipe-details">Serving Size: 2 people
+                        Prep Time: 10 minutes
+                        Cooking Time: 25 minutes
+                        Total Time: 35 minutes</div>
+                    <div class="recipe-content">Step 1: Prepare the Vegetables<br>
+                        Preheat the oven to 400°F (200°C).
+                        Toss the baby potatoes, cherry tomatoes, and broccoli with olive oil, garlic powder, salt, and pepper.
+                        Spread them on a baking sheet and roast for 20-25 minutes until tender and golden.<br>
+                        Step 2: Cook the Steak<br>
+                        Heat a cast-iron skillet over medium-high heat and add olive oil.
+                        Pat the steaks dry with a paper towel and season both sides with salt and pepper.
+                        Sear the steaks for 3-4 minutes per side (for medium-rare) or longer if desired.<br>
+                        Step 3: Make the Garlic Butter<br>
+                        Reduce heat to medium-low and add butter, minced garlic, rosemary, thyme, and parsley to the skillet.
+                        Tilt the pan and spoon the melted butter over the steaks for about 1 minute.<br>
+                        Step 4: Serve & Enjoy!<br>
+                        Remove the steaks from the pan and let them rest for 5 minutes.
+                        Serve with the roasted vegetables and drizzle with any remaining garlic butter from the pan.</div>
                 </div>
-                <div id="ingredients"class="recipe-side rightA">
-                    
+                <div class="recipe-side">
+                    <h3>Garlic butter steak:</h3>
+                    <label><input type="checkbox" name="filter" value="vegan">2 Ribeye or sirloin steaks</label><br>
+                    <label><input type="checkbox" name="filter" value="lactose_free">2 Tbsp olive oil</label><br>
+                    <label><input type="checkbox" name="filter" value="high_protein">3 Tbsp unsalted butter</label><br>
+                    <label><input type="checkbox" name="filter" value="low_carb">4 Cloves garlic</label><br>
+                    <label><input type="checkbox" name="filter" value="gluten_free">1 tsp fresh rosemary</label><br>
+                    <label><input type="checkbox" name="filter" value="vegan">1 tsp fresh thyme</label><br>
+                    <label><input type="checkbox" name="filter" value="lactose_free">1 tsp fresh parsley</label><br>
+                    <label><input type="checkbox" name="filter" value="high_protein">Salt and pepper to taste</label><br>
+                    <h3>Roasted vegetables:</h3>
+                    <label><input type="checkbox" name="filter" value="low_carb">1 cup baby potatoes</label><br>
+                    <label><input type="checkbox" name="filter" value="gluten_free">1 cup cherry tomatoes</label><br>
+                    <label><input type="checkbox" name="filter" value="lactose_free">1 cup broccoli florets</label><br>
+                    <label><input type="checkbox" name="filter" value="high_protein">1 tbsp olive oil</label><br>
+                    <label><input type="checkbox" name="filter" value="low_carb">1/2 tsp garlic powder</label><br>
+                    <label><input type="checkbox" name="filter" value="gluten_free">Salt and pepper to taste</label><br>
                 </div>
             </div>
             </main>
