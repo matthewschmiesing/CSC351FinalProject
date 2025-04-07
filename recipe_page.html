@@ -1,54 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css.css">
-        <script src="jsRecipeDetails/recipeDetail.js"></script>
-        </head>
-        <body>
-            <header>
-                <div class="navigationBar">
-                  <nav>
-                      <a href="index.html" class="navLinks">Home</a>
-                      <a href="recipe_listing.html" class="navLinks">Recipe Listings</a>
-                      <a href="favoritespage.html" class="navLinks">Favorites</a>
-                      <a href="about.html" class="navLinks">About</a>
-                  </nav>
-                  
-              </div>
-              
-            </header>
-            <main class="">
-            <div class="recipe-page row">
-                <div class="recipe-main leftA">
-                    <div class="row">
-                        <div class="leftA">
-                            <h3 id="recipeName" class="recipe-title"></h3>
-                            <div class="row"><h3>Category:</h3><p id="category"></p></div>
-                            <div class="row"><h3>Dietary:</h3><p id="dietary"></p></div>
-                            <div class="row"><h3>Season:</h3><p id="season"></p></div>
-                            <div class="row"><h3>Cuisine:</h3><p id="cuisine"></p></div>
-                            <div class="row"><h3>Difficulty:</h3><p id="difficulty"></p></div>
-                            <div class="row"><h3>Prep Time:</h3><p id="prep_time"></p></div>
-                        </div>
-                        <div class="">
-                            <div class="recipe-page-image-container center"><img id="image" src=""></div>
-                        </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css.css">
+    <script src="jsRecipeDetails/recipeDetail.js"></script>
+    <script src="jsFunctions/cookingTimer.js"></script>
+    <script src="jsRecipeDetails/recipeStory.js"></script>
+    <title>Recipe Detail</title>
+</head>
+<body>
+    <header>
+        <div class="navigationBar">
+            <nav>
+                <a href="index.html" class="navLinks">Home</a>
+                <a href="recipe_listing.html" class="navLinks">Recipe Listings</a>
+                <a href="favoritespage.html" class="navLinks">Favorites</a>
+                <a href="about.html" class="navLinks">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="recipe-page row">
+            <div class="recipe-main leftA">
+                <h3 id="recipeName" class="recipe-title"></h3>
+                <div class="row">
+                    <div class="leftA">
+                        
+                        <div class="row"><h3>Category:</h3><p id="category"></p></div>
+                        <div class="row"><h3>Dietary:</h3><p id="dietary"></p></div>
+                        <div class="row"><h3>Season:</h3><p id="season"></p></div>
+                        <div class="row"><h3>Cuisine:</h3><p id="cuisine"></p></div>
+                        <div class="row"><h3>Difficulty:</h3><p id="difficulty"></p></div>
+                        <div class="row"><h3>Prep Time:</h3><p id="prep_time"></p></div>
                     </div>
-                    <div id="recipeSteps" class="recipe-content"></div>
+                    <div class="">
+                        <div class="recipe-page-image-container center"><img id="image" src=""></div>
+                    </div>
                 </div>
-                <div id="ingredients"class="recipe-side rightA">
+                <div id="recipeSteps" class="recipe-content"></div>
+            </div>
+
+            <div class="recipe-page-right">
+                <div id="ingredients" class="recipe-side "></div>
+                <div class="">
+                    <div class="timerBox">
+                        <h3>Cooking Timer</h3>
+                    
+                        <div class="input-group">
+                            <label for="hoursInput">Hours:</label>
+                            <input type="number" id="hoursInput" min="0" value="0">
+                        </div>
+                    
+                        <div class="input-group">
+                            <label for="minutesInput">Minutes:</label>
+                            <input type="number" id="minutesInput" min="0" value="0">
+                        </div>
+                    
+                        <div class="button-group">
+                            <button id="startButton" class="timerButton">Start</button>
+                            <button id="pauseButton" class="timerButton">Pause</button>
+                            <button id="resetButton" class="timerButton">Reset</button>
+                        </div>
+                    
+                        <div id="timer" class="timerFont">00h 00m 00s</div>
+                    
+                        <audio id="alarmSound">
+                            <source src="alarm.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    
                     
                 </div>
             </div>
-            </main>
+        </div>
+        <div class="recipe-story">
+            <h3>Recipe Story</h3>
+            <div id="recipeStory"></div>
+        </div>
+    </main>
 
-            <footer class="row">
-                <h5>Team 5</h5>
-                <h5><a href="https://github.com/matthewschmiesing/CSC351FinalProject">GitHub Link to Project</a></h5>
-                <h5>Credit</h5>
-              </footer>
-        </body>
-        
-</html>
+    <footer class="row" id="footer">
+        <h5>Team 5</h5>
+        <h5><a href="https://github.com/matthewschmiesing/CSC351FinalProject">GitHub Link to Project</a></h5>
+        <h5>Credit</h5>
+    </footer>
