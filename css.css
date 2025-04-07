@@ -151,6 +151,14 @@ h4 {
     contain: content;
 }
 
+.rowB {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
 .cardRow {
     display: flex;
     gap: 20px;
@@ -338,6 +346,20 @@ footer {
     scrollbar-width: none; /* Hide scrollbar in Firefox */
     -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
     white-space: nowrap;
+    padding: 10px;
+}
+
+.favorites-container {
+    display: flex;
+    justify-content: center; /* Center the content */
+    width: 100%;
+}
+
+.favorites-track {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the items */
     padding: 10px;
 }
 
