@@ -63,7 +63,7 @@ nav {
     border: solid;
     border-radius: 20px;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
-    height: auto;
+    height: 50%;
     width: 30vw;
     margin-left: 2vw;
     margin-bottom: 3vh;
@@ -523,9 +523,10 @@ footer {
 .recipe-main{
     margin:10px;
     width:50%;
+    height: auto;
     vertical-align: top;
     background-color: #D8D8D8;
-    padding: 40px;
+    padding: 0px 40px;
     border: solid;
     border-radius: 20px;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
@@ -533,6 +534,7 @@ footer {
     margin-bottom: 3vh;
     align-content: center;
     contain: content;
+    font-size: 120%;
 }
 
 .recipe-title{
@@ -585,7 +587,7 @@ footer {
     border: solid;
     border-radius: 20px;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
-    height: auto;
+    height: 50%;
     width: 30vw;
     margin-left: 2vw;
     margin-bottom: 3vh;
@@ -593,8 +595,36 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    justify-content: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    text-align: left;
 }
 
+.recipe-page-right {
+    height: 100%;
+    margin-bottom: 3vh;
+}
+
+
+.recipe-story {
+    width:95vw;
+    height: auto;
+    vertical-align: top;
+    background-color: #D8D8D8;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    border: solid;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+    margin-left: 2vw;
+    margin-bottom: 3vh;
+    align-content: center;
+    contain: content;
+    line-height: 200%;
+    font-size: 120%;
+    text-align: center;
+    
+}
 
 .aboutEdna p{
     align-content: center;

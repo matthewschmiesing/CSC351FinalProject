@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css.css">
     <script src="jsRecipeDetails/recipeDetail.js"></script>
     <script src="jsFunctions/cookingTimer.js"></script>
+    <script src="jsRecipeDetails/recipeStory.js"></script>
     <title>Recipe Detail</title>
 </head>
 <body>
@@ -23,9 +24,10 @@
     <main>
         <div class="recipe-page row">
             <div class="recipe-main leftA">
+                <h3 id="recipeName" class="recipe-title"></h3>
                 <div class="row">
                     <div class="leftA">
-                        <h3 id="recipeName" class="recipe-title"></h3>
+                        
                         <div class="row"><h3>Category:</h3><p id="category"></p></div>
                         <div class="row"><h3>Dietary:</h3><p id="dietary"></p></div>
                         <div class="row"><h3>Season:</h3><p id="season"></p></div>
@@ -40,10 +42,10 @@
                 <div id="recipeSteps" class="recipe-content"></div>
             </div>
 
-            <div class="column">
-                <div id="ingredients" class="recipe-side RightA"></div>
+            <div class="recipe-page-right">
+                <div id="ingredients" class="recipe-side "></div>
                 <div class="">
-                    <div class="timerBox column">
+                    <div class="timerBox">
                         <h3>Cooking Timer</h3>
                     
                         <div class="input-group">
@@ -73,6 +75,10 @@
                     
                 </div>
             </div>
+        </div>
+        <div class="recipe-story">
+            <h3>Recipe Story</h3>
+            <div id="recipeStory"></div>
         </div>
     </main>
 
