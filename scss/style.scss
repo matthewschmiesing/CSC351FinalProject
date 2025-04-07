@@ -1,0 +1,531 @@
+$backgroundLight: #ffffea;
+$secondaryLight: #d8d8d8;
+$tertiaryLight:#Fe6f5e;
+$backgroundDark: #b8b8a9;
+$secondaryDark: #949494;
+$tertiaryDark: #7d362e;
+$background: $backgroundLight;
+$secondary: $secondaryLight;
+$tertiary: $tertiaryLight;
+
+:root{
+    --bg-color:#{$backgroundLight};
+    --secondary-color:#{$secondaryLight};
+    --tertiary-color:#{$tertiaryLight};
+}
+
+[data-theme="dark"]{
+    --bg-color:#{$backgroundDark};
+    --secondary-color:#{$secondaryDark};
+    --tertiary-color:#{$tertiaryDark};
+}
+
+@keyframes recipeCardBoxHover {
+    from {background-color: var(--secondary-color);
+        color: var(--tertiary-color);}
+    to {background-color: var(--tertiary-color);
+        color: var(--secondary-color);}
+}
+
+* {
+    font-family:'Playfair Display', serif; /* Set default font */
+}
+
+.navigationBar {
+    top: 0;
+    left: 0; /* Position the navigation bar at the top */
+    position: fixed; /* Make the navigation bar fixed */
+    width: 100%; /* Set width to 100% of viewport */
+    height: auto;
+    margin-left: 0;
+    background-color: var(--secondary-color); /* Timberwolf background */
+    display: flex; /* Use flexbox for layout */
+    justify-content: left;
+    align-items: center; 
+    border: solid;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+}
+
+.navBarRow {
+    padding-left: 10%; /* Add padding to the left */
+    padding-right: 10%; /* Add padding to the right */
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Add space between items */
+    
+}
+
+
+.navLinks {
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* Set text color to black */
+    font-size: 130%; /* Increase font size */
+    padding: 10px; /* Add padding inside links */
+}
+
+.navLinks:hover {
+    color: var(--tertiary-color);
+}
+
+nav {
+    display: flex;
+}
+
+.navButton {
+    background-color: rgb(255, 255, 255); /* White background for buttons */
+    font-size: 90%; /* Set smaller font size */
+    border: none; /* Remove border */
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('digital-7-mono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.timerFont {
+    font-family: 'CustomFont', sans-serif;
+    color: rgb(0, 0, 0); /* Set text color to black */
+    font-size: 140%; /* Increase font size */
+    padding: 10px; /* Add padding inside links */
+
+}
+
+.timerButton {
+    border: solid black;
+    background-color: var(--tertiary-color);
+    font-size: 110%;
+    border-radius: 10px;
+}
+
+.timerButton:hover {
+    background-color: grey;
+}
+
+main {
+    margin-top: 10vh;
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden */
+}
+
+h1 {
+    color: var(--tertiary-color);
+    font-size: 4vw;
+}
+
+h2 {
+    color: var(--tertiary-color);
+}
+
+.bloggerBox h2{
+    color: #000000;
+    font-size: 200%;
+}
+
+.bloggerBox img {
+    max-width: 60%; /* Prevents overflow */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra space below the image */
+    border: solid black;
+    border-radius: 10px;
+}
+
+
+h3 {
+    color: var(--tertiary-color);
+    margin-left: 2vw;
+}
+
+h4 {
+    color: var(--tertiary-color);
+}
+
+
+.leftA {
+    width: 50%;
+}
+
+.rightA {
+    width: 50%;
+}
+
+.leftB {
+    width: 40%;
+}
+
+.rightB {
+    width: 60%;
+}
+  
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.cardRow {
+    display: flex;
+    gap: 20px;
+}
+
+.center {
+    text-align: center; /* Center-align text */
+    margin: auto; /* Center content horizontally */
+    justify-content: center;
+    align-content: center;
+}
+
+.recipeCardSection {
+    justify-content: center;
+}
+
+footer {
+    background-color: var(--tertiary-color);
+    justify-content: center;
+    width: 100vw;
+    margin-left: 0;
+    position: relative;
+    bottom: 0;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+  }
+
+.sectionA {
+    margin:10px
+}
+
+.titleAndIntro {
+    margin-left: 2vw;
+    width: 50vw;
+}
+
+.titleAndIntro p {
+    line-height: 200%;
+    max-width: 90%;
+    font-size: 120%;
+    text-align: center;
+}
+
+.titleAndIntro h1 { 
+    margin-left: 45px;
+}
+
+.bloggerBox {
+    background-color: var(--tertiary-color);
+    border: solid;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+    height: 70vh;
+    width: 600px ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Centers content vertically (if height is set) */
+    text-align: center;
+}
+
+.bloggerBox div {
+    display: flex;
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: center; /* Center them horizontally */
+}
+
+
+
+.recipeCardBox {
+    background-color: var(--secondary-color);
+    padding: 40px;
+    border: solid black;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+    height: 30vh;
+    width: 40vw ;
+    margin-left: 2vw;
+    margin-bottom: 3vh;
+    display: flex;
+    
+}
+
+.recipeCardBox p {
+    font-size: 90%;
+    color: black;
+}
+
+.recipeCardBox h4{
+    color: var(--tertiary-color);
+}
+
+.recipeCardBox:hover {
+    box-shadow: 0 2px #000000;
+    transform: translateY(2px);
+    animation: recipeCardBoxHover 0.3s forwards;
+}
+
+.recipeCardBox:hover h4{
+    animation: recipeCardBoxHover 0.3s forwards;
+}
+
+/* .recipeCardBox:active {
+    box-shadow: 0 2px #000000;
+    transform: translateY(2px);
+} */
+
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+
+
+.recipeCardBox .imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* This makes sure the image takes up the available space */
+}
+
+.recipeCardBox img {
+    width: 100%;
+    height: auto;
+    border: solid black;
+    border-radius: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+/* Listings and Recipe Pages */
+.listing-content{
+    display:inline-block;
+    width:100%;
+}
+
+.listing-main{
+    display: inline-block;
+    width: 70%;
+    vertical-align:top;
+
+}
+
+.listing-side{
+    display: inline-block;
+    margin-left:3%;
+    margin-top: 8%;
+    width:25%;
+    vertical-align: top;
+}
+
+.main-search{
+    margin-top: 50px;
+}
+
+#large-search{
+    display: inline-block;
+    width:97%;
+    border:1px solid black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.recipe-list{
+    margin:30px;
+    margin-left: 0px;
+}
+
+.recipe-line{
+    width: 100%;
+    margin: 10px;
+    margin-left: 0px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+
+.filter-list{
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 10px;
+    width:95%;
+}
+
+.filter{
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin:5px;
+}
+
+.search-bar{
+    margin-left: 300px;
+}
+
+.recipe-page{
+    display: inline-block;
+    margin-top:20px;
+
+}
+
+.recipe-main{
+    display: inline-block;
+    margin:10px;
+    width:60%;
+    vertical-align: top;
+    background-color: #D8D8D8;
+    padding: 40px;
+    border: solid;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+    margin-left: 2vw;
+    margin-bottom: 3vh;
+    align-content: center;
+}
+
+.recipe-title{
+    text-align: center;
+
+}
+
+.recipe-picture{
+    margin-left:30%;
+}
+
+.recipe-details{
+    text-align: center;
+    margin:20px;
+}
+
+.recipe-content{
+    line-height: 25px;
+}
+
+.recipe-side{
+    border: 1px solid black;
+    border-radius:10px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    width:25%;
+    vertical-align: top;
+    margin-top:10px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+
+
+    background-color: #D8D8D8;
+    padding: 40px;
+    border: solid;
+    border-radius: 20px;
+    align-content: center;
+}
+
+
+.aboutEdna p{
+    align-content: center;
+    padding: 40px;
+    font-size: 120%;
+    line-height: 50px;
+}
+
+.aboutEdna h1{
+    padding-left: 20px;
+}
+
+
+
+//Slider CSS
+#dark-mode{
+    margin-top:-20px;
+    margin-left:800px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 1.75em;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.25em;
+    width: 1.25em;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--secondary-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--tertiary-color);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--tertiary-color);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+#dark-mode-switch{
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0); /* Set text color to black */
+    font-size: 130%; /* Increase font size */
+    padding: 10px; /* Add padding inside links */
+    display: inline-block;
+}
