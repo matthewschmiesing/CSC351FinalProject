@@ -1,3 +1,32 @@
+$backgroundLight: #ffffea;
+$secondaryLight: #d8d8d8;
+$tertiaryLight:#Fe6f5e;
+$backgroundDark: #4c4c4c;
+$secondaryDark: #949494;
+$tertiaryDark: #7d362e;
+$background: $backgroundLight;
+$secondary: $secondaryLight;
+$tertiary: $tertiaryLight;
+
+:root{
+    --bg-color:#{$backgroundLight};
+    --secondary-color:#{$secondaryLight};
+    --tertiary-color:#{$tertiaryLight};
+}
+
+[data-theme="dark"]{
+    --bg-color:#{$backgroundDark};
+    --secondary-color:#{$secondaryDark};
+    --tertiary-color:#{$tertiaryDark};
+}
+
+@keyframes recipeCardBoxHover {
+    from {background-color: var(--secondary-color);
+        color: var(--tertiary-color);}
+    to {background-color: var(--tertiary-color);
+        color: var(--secondary-color);}
+}
+
 * {
     font-family:'Playfair Display', serif; /* Set default font */
 }
@@ -9,7 +38,7 @@
     width: 100%; /* Set width to 100% of viewport */
     height: auto;
     margin-left: 0;
-    background-color: #D8D8D8; /* Timberwolf background */
+    background-color: var(--secondary-color); /* Timberwolf background */
     display: flex; /* Use flexbox for layout */
     justify-content: left;
     align-items: center; 
@@ -37,7 +66,7 @@
 }
 
 .navLinks:hover {
-    color: #Fe6f5e;
+    color: var(--tertiary-color);
 }
 
 nav {
@@ -58,7 +87,7 @@ nav {
 }
 
 .timerBox {
-    background-color: #D8D8D8;
+    background-color: var(--secondary-color);
     padding: 30px 40px;
     border: solid;
     border-radius: 20px;
@@ -110,7 +139,7 @@ nav {
 
 .timerButton {
     border: solid black;
-    background-color: #Fe6f5e;
+    background-color: var(--tertiary-color);
     font-size: 110%;
     border-radius: 10px;
     padding: 8px 12px;
@@ -128,19 +157,19 @@ main {
 }
 
 body {
-    background-color: #FFFFEA;
+    background-color: var(--bg-color);
     margin: 0;
     padding: 0;
     /* overflow-x: hidden */
 }
 
 h1 {
-    color: #Fe6f5e;
+    color: var(--tertiary-color);
     font-size: 4vw;
 }
 
 h2 {
-    color: #Fe6f5e;
+    color: var(--tertiary-color);
 }
 
 .bloggerBox h2{
@@ -158,12 +187,12 @@ h2 {
 
 
 h3 {
-    color: #Fe6f5e;
+    color: var(--tertiary-color);
     margin-left: 2vw;
 }
 
 h4 {
-    color: #Fe6f5e;
+    color: var(--tertiary-color);
 }
 
 
@@ -224,7 +253,7 @@ h4 {
 }
 
 footer {
-    background-color: #Fe6f5e;
+    background-color: var(--tertiary-color);
     justify-content: center;
     width: 100vw;
     margin-left: 0;
@@ -255,7 +284,7 @@ footer {
 }
 
 .bloggerBox {
-    background-color: #Fe6f5e;
+    background-color: var(--tertiary-color);
     border: solid;
     border-radius: 10px;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
@@ -278,7 +307,7 @@ footer {
 
 
 .recipeCardBox {
-    background-color: #D8D8D8;
+    background-color: var(--secondary-color);
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 40px;
@@ -296,15 +325,27 @@ footer {
 
 .recipeCardBox p {
     font-size: 100%;
+    color: black;
+}
+
+.recipeCardBox:hover li {
+    font-size: 100%;
+    color: black;
 }
 
 .recipeCardBox h4 {
     font-size: 110%;
+    color: var(--tertiary-color);
 }
 
 .recipeCardBox:hover {
     box-shadow: 0 2px #000000;
     transform: translateY(2px);
+    animation: recipeCardBoxHover 0.3s forwards;
+}
+
+.recipeCardBox:hover h4{
+    animation: recipeCardBoxHover 0.3s forwards;
 }
 
 .like-container {
@@ -525,7 +566,7 @@ footer {
     width:50%;
     height: auto;
     vertical-align: top;
-    background-color: #D8D8D8;
+    background-color: var(--secondary-color);
     padding: 0px 40px;
     border: solid;
     border-radius: 20px;
@@ -582,7 +623,7 @@ footer {
 }
 
 .recipe-side{
-    background-color: #D8D8D8;
+    background-color: var(--secondary-color);
     padding: 30px 40px;
     border: solid;
     border-radius: 20px;
@@ -610,7 +651,7 @@ footer {
     width:95vw;
     height: auto;
     vertical-align: top;
-    background-color: #D8D8D8;
+    background-color: var(--secondary-color);
     padding: 20px 30px;
     box-sizing: border-box;
     border: solid;
@@ -637,3 +678,80 @@ footer {
     padding-left: 20px;
 }
 
+
+
+//Slider CSS
+#dark-mode{
+    margin-top:-20px;
+    margin-left:800px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 1.75em;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.25em;
+    width: 1.25em;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--secondary-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--tertiary-color);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--tertiary-color);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+#dark-mode-switch{
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0); /* Set text color to black */
+    font-size: 130%; /* Increase font size */
+    padding: 10px; /* Add padding inside links */
+    display: inline-block;
+}

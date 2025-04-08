@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="scss/style.css">
     <script src="jsRecipeDetails/recipeDetail.js"></script>
     <script src="jsFunctions/cookingTimer.js"></script>
     <script src="jsRecipeDetails/recipeStory.js"></script>
@@ -17,6 +17,13 @@
                 <a href="recipe_listing.html" class="navLinks">Recipe Listings</a>
                 <a href="favoritespage.html" class="navLinks">Favorites</a>
                 <a href="about.html" class="navLinks">About</a>
+                <div id="dark-mode">
+                    <label class="switch" id="theme-switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                    <p id="dark-mode-switch">Dark mode</p>
+                </div>
             </nav>
         </div>
     </header>
@@ -28,12 +35,12 @@
                 <div class="row">
                     <div class="leftA">
                         
-                        <div class="row"><h3>Category:</h3><p id="category"></p></div>
-                        <div class="row"><h3>Dietary:</h3><p id="dietary"></p></div>
-                        <div class="row"><h3>Season:</h3><p id="season"></p></div>
-                        <div class="row"><h3>Cuisine:</h3><p id="cuisine"></p></div>
-                        <div class="row"><h3>Difficulty:</h3><p id="difficulty"></p></div>
-                        <div class="row"><h3>Prep Time:</h3><p id="prep_time"></p></div>
+                        <div class="row"><p>Category:</p><p id="category"></p></div>
+                        <div class="row"><p>Dietary:</p><p id="dietary"></p></div>
+                        <div class="row"><p>Season:</p><p id="season"></p></div>
+                        <div class="row"><p>Cuisine:</p><p id="cuisine"></p></div>
+                        <div class="row"><p>Difficulty:</p><p id="difficulty"></p></div>
+                        <div class="row"><p>Prep Time:</p><p id="prep_time"></p></div>
                     </div>
                     <div class="">
                         <div class="recipe-page-image-container center"><img id="image" src=""></div>
@@ -85,3 +92,7 @@
         <h5><a href="https://github.com/matthewschmiesing/CSC351FinalProject">GitHub Link to Project</a></h5>
         <h5>Credit</h5>
     </footer>
+
+</body>
+<script src="darkMode.js"></script>
+</html>

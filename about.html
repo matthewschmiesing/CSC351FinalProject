@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="scss/style.css" />
+    <link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
     <header>
@@ -14,6 +14,13 @@
               <a href="recipe_listing.html" class="navLinks">Recipe Listings</a>
               <a href="favoritespage.html" class="navLinks">Favorites</a>
               <a href="about.html" class="navLinks">About</a>
+              <div id="dark-mode">
+                <label class="switch" id="theme-switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <p id="dark-mode-switch">Dark mode</p>
+              </div>
           </nav>
           
       </div>
@@ -36,5 +43,7 @@
         <h5><a href="https://github.com/matthewschmiesing/CSC351FinalProject">GitHub Link to Project</a></h5>
         <h5>Credit</h5>
       </footer>
+      <script src="darkMode.js"></script>
 </body>
+
 </html>
