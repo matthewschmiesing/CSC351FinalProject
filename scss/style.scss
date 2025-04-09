@@ -544,6 +544,7 @@ footer {
 #listingContainer p:hover{
     background-color: var(--tertiary-color);
     border-radius: 10px;
+    cursor: pointer;
 }
 
 
@@ -566,6 +567,18 @@ footer {
 }
 
 #dietaryFilter{
+    //color: var(--secondary-color);
+    border-radius: 10px;
+    background-color: white;
+}
+
+#difficultyFilter{
+    //color: var(--secondary-color);
+    border-radius: 10px;
+    background-color: white;
+}
+
+#prepFilter{
     //color: var(--secondary-color);
     border-radius: 10px;
     background-color: white;
@@ -633,13 +646,14 @@ footer {
 
 .recipe-page{
     margin-top:20px;
+    margin-bottom: 20px;
 
 }
 
 .recipe-main{
-    margin:10px;
+    //margin:10px;
     width:50%;
-    height: auto;
+    height: 100%;
     vertical-align: top;
     background-color: var(--secondary-color);
     padding: 0px 40px;
@@ -647,7 +661,7 @@ footer {
     border-radius: 20px;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
     margin-left: 2vw;
-    margin-bottom: 3vh;
+    //margin-bottom: 3vh;
     align-content: center;
     contain: content;
     font-size: 120%;
@@ -718,9 +732,19 @@ footer {
 
 .recipe-page-right {
     height: 100%;
-    margin-bottom: 3vh;
+    //margin-bottom: 3vh;
 }
 
+.strikethrough {
+    text-decoration: line-through;
+  }
+
+.checkmark {
+    height: 1.5em;
+    width: 1.5em;
+    
+}
+  
 
 .recipe-story {
     width:95vw;

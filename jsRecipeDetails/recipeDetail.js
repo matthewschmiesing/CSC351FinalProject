@@ -77,7 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 let div = document.createElement("div");
                 let label = document.createElement("label");
                 let checkbox = document.createElement("input");
-
+                
+                checkbox.classList.add("checkmark");
                 checkbox.type = "checkbox";
                 checkbox.name = "filter";
                 checkbox.value = ingredient;
@@ -85,8 +86,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 label.appendChild(checkbox);
                 label.appendChild(document.createTextNode(` ${ingredient}`));
 
+                checkbox.addEventListener("change", () => {
+                    if (checkbox.checked) {
+                        label.classList.add("strikethrough");
+                    } else {
+                        label.classList.remove("strikethrough");
+                    }
+                });
+
                 div.appendChild(label);
                 div.appendChild(document.createElement("br"));
+
+                
 
                 ingredientsCon.appendChild(div);
             });
