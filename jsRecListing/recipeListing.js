@@ -40,11 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const seasonSet = new Set();
         const cuisineSet = new Set();
         const dietarySet = new Set();
+        const prepSet = new Set();
+        const difficultySet = new Set();
 
         recipes.forEach(r => {
             if (r.category) categorySet.add(r.category);
             if (r.season) seasonSet.add(r.season);
             if (r.cuisine) cuisineSet.add(r.cuisine);
+            if (r.prep_time) prepSet.add(r.prep_time);
+            if (r.difficulty) difficultySet.add(r.difficulty)
+            
             if (Array.isArray(r.dietary)) r.dietary.forEach(d => dietarySet.add(d));
         });
 
@@ -52,6 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
         populateSelect("seasonFilter", seasonSet);
         populateSelect("cuisineFilter", cuisineSet);
         populateSelect("dietaryFilter", dietarySet);
+        populateSelect("prepFilter", prepSet);
+        populateSelect("difficultyFilter", difficultySet);
     }
 
     function populateSelect(id, values) {
@@ -71,15 +78,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const season = document.getElementById("seasonFilter").value;
         const cuisine = document.getElementById("cuisineFilter").value;
         const dietary = document.getElementById("dietaryFilter").value;
+        const prep_time = document.getElementById("prepFilter").value;
+        const difficulty = document.getElementById("difficultyFilter").value;
 
         const filtered = allRecipes.filter(recipe => {
             const matchesSearch = recipe.name.toLowerCase().includes(search);
             const matchesCategory = !category || recipe.category === category;
             const matchesSeason = !season || recipe.season === season;
             const matchesCuisine = !cuisine || recipe.cuisine === cuisine;
+            const matchesPrepTime = !prep_time || recipe.prep_time === prep_time;
+            const matchesDifficulty = !difficulty || recipe.difficulty === difficulty;
             const matchesDietary = !dietary || (Array.isArray(recipe.dietary) && recipe.dietary.includes(dietary));
 
-            return matchesSearch && matchesCategory && matchesSeason && matchesCuisine && matchesDietary;
+            return matchesSearch && matchesCategory && matchesSeason && matchesCuisine && matchesPrepTime && matchesDifficulty && matchesDietary ;
         });
 
         displayRecipeNames(filtered, "listingContainer");
@@ -127,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Attach filter event listeners
-    ["searchInput", "categoryFilter", "seasonFilter", "cuisineFilter", "dietaryFilter"].forEach(id => {
+    ["searchInput", "categoryFilter", "seasonFilter", "cuisineFilter", "dietaryFilter", "prepFilter", "difficultyFilter"].forEach(id => {
         document.getElementById(id).addEventListener("input", displayFilteredRecipes);
         document.getElementById(id).addEventListener("change", displayFilteredRecipes);
     });
