@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/style.css">
+    <script src="jsRecListing/recipeListing.js"></script>
     </head>
     <body>
         <header>
@@ -22,31 +23,32 @@
           
         </header>
         <main>
-        <div class="listing-content">
-            <div class="listing-main">
-                <div class="main-search">
-                    <label for="large-search">Search</label>
-                    <input type="text" id="large-search" name="large-search">
-                </div>
-                <div class="recipe-list">
-                    <div class="recipe-line">pasta</div>
-                    <div class="recipe-line">brownies</div>
-                    <div class="recipe-line">chicken parm</div>
-                    <div class="recipe-line">meatballs</div>
-                    <div class="recipe-line">lasagna</div>
-                    <div class="recipe-line">loaded baked potato</div>
+            <div class="listingBox">
+                <div class="listing-content">
+                    <div class="listing-search center">
+                        <div id="filterControls">
+                            <input type="text" id="searchInput" placeholder="Search by recipe name...">
+                            <div class="listingFilters">
+                                <select id="categoryFilter">
+                                    <option value="">All Categories</option>
+                                </select>
+                                <select id="seasonFilter">
+                                    <option value="">All Seasons</option>
+                                </select>
+                                <select id="cuisineFilter">
+                                    <option value="">All Cuisines</option>
+                                </select>
+                                <select id="dietaryFilter">
+                                    <option value="">All Dietary Types</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div id="listingContainer"></div>
+                    
                 </div>
             </div>
-            <div class="listing-side">
-                <div class="filter-list">
-                    <label><input type="checkbox" name="filter" value="vegan"> Vegan</label><br>
-                    <label><input type="checkbox" name="filter" value="lactose_free"> Lactose Free</label><br>
-                    <label><input type="checkbox" name="filter" value="high_protein"> High Protein</label><br>
-                    <label><input type="checkbox" name="filter" value="low_carb"> Low Carb</label><br>
-                    <label><input type="checkbox" name="filter" value="gluten_free"> Gluten Free</label><br>
-                </div>
-            </div>
-        </div>
         </main>
         <footer class="row" id="footer">
             <h5>Team 5</h5>
