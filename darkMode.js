@@ -1,6 +1,6 @@
-const themeSwitch = document.querySelector("#theme-switch input");
+const themeSwitch = document.getElementById("dark-mode-button");
 
-themeSwitch.addEventListener("change", () => { // Use "change" event instead of "click"
+themeSwitch.addEventListener("click", () => {
     console.log("Theme toggled");
     if (document.body.getAttribute("data-theme") === "dark") {
         document.body.removeAttribute("data-theme");
@@ -11,7 +11,11 @@ themeSwitch.addEventListener("change", () => { // Use "change" event instead of 
     }
 });
 
-const savedTheme = localStorage.getItem('theme');
+const savedTheme = localStorage.getItem("theme");
 if(savedTheme){
-    body.setAttribute('data-theme', savedTheme);
-}
+    if(savedTheme === "dark"){
+        document.body.setAttribute("data-theme", "dark");
+    } else{
+        document.body.removeAttribute("data-theme");
+    }
+}   
