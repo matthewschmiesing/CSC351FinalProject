@@ -462,6 +462,28 @@ footer {
 }
 
 /* Listings and Recipe Pages */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  gap: 0.5em;
+  position: absolute;
+  bottom: 10%;
+  left: 30%;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background: var(--tertiary-color);
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background: #ddd;
+  cursor: default;
+}
+
 .listing-content {
   justify-content: center;
   margin: 10px;

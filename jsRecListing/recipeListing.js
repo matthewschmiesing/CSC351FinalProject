@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     let allRecipes = [];
+    let currentPage = 1;
+    const recipesPerPage = 14;
+    let currentFilteredRecipes = [];
+
 
     function fetchAllRecipes(index = 0) {
         if (index >= recipeFiles.length) {
@@ -80,8 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const dietary = document.getElementById("dietaryFilter").value;
         const prep_time = document.getElementById("prepFilter").value;
         const difficulty = document.getElementById("difficultyFilter").value;
-
-        const filtered = allRecipes.filter(recipe => {
+    
+        currentFilteredRecipes = allRecipes.filter(recipe => {
             const matchesSearch = recipe.name.toLowerCase().includes(search);
             const matchesCategory = !category || recipe.category === category;
             const matchesSeason = !season || recipe.season === season;
@@ -89,44 +93,46 @@ document.addEventListener("DOMContentLoaded", () => {
             const matchesPrepTime = !prep_time || recipe.prep_time === prep_time;
             const matchesDifficulty = !difficulty || recipe.difficulty === difficulty;
             const matchesDietary = !dietary || (Array.isArray(recipe.dietary) && recipe.dietary.includes(dietary));
-
-            return matchesSearch && matchesCategory && matchesSeason && matchesCuisine && matchesPrepTime && matchesDifficulty && matchesDietary ;
+    
+            return matchesSearch && matchesCategory && matchesSeason && matchesCuisine && matchesPrepTime && matchesDifficulty && matchesDietary;
         });
-
-        displayRecipeNames(filtered, "listingContainer");
+    
+        currentPage = 1;
+        displayPaginatedRecipes();
     }
+    
 
-    function displayRecipeNames(recipes, containerId) {
-        const container = document.getElementById(containerId);
+    function displayPaginatedRecipes() {
+        const container = document.getElementById("listingContainer");
         if (!container) return;
-
+    
         container.innerHTML = "";
-
-        if (recipes.length === 0) {
+    
+        const start = (currentPage - 1) * recipesPerPage;
+        const end = start + recipesPerPage;
+        const paginatedRecipes = currentFilteredRecipes.slice(start, end);
+    
+        if (paginatedRecipes.length === 0) {
             container.innerHTML = "<p>No matching recipes found.</p>";
             return;
         }
-
+    
         // Group recipes by the first letter
         const groupedRecipes = {};
-        recipes.forEach(recipe => {
+        paginatedRecipes.forEach(recipe => {
             const firstLetter = recipe.name[0].toUpperCase();
             if (!groupedRecipes[firstLetter]) {
                 groupedRecipes[firstLetter] = [];
             }
             groupedRecipes[firstLetter].push(recipe);
         });
-
-        // Sort letters alphabetically
+    
         const letters = Object.keys(groupedRecipes).sort();
-
         letters.forEach(letter => {
-            // Add the letter as a heading
             const letterHeading = document.createElement("h2");
             letterHeading.textContent = letter;
             container.appendChild(letterHeading);
-
-            // List the recipes under the corresponding letter
+    
             groupedRecipes[letter].forEach(recipe => {
                 const recipeLink = document.createElement("p");
                 recipeLink.classList.add("clickable");
@@ -135,7 +141,52 @@ document.addEventListener("DOMContentLoaded", () => {
                 container.appendChild(recipeLink);
             });
         });
+    
+        addPaginationControls();
     }
+
+    function addPaginationControls() {
+        const container = document.getElementById("listingContainer");
+        const totalPages = Math.ceil(currentFilteredRecipes.length / recipesPerPage);
+    
+        const paginationDiv = document.createElement("div");
+        paginationDiv.classList.add("pagination");
+    
+        if (currentPage > 1) {
+            const prevBtn = document.createElement("button");
+            prevBtn.textContent = "Previous";
+            prevBtn.onclick = () => {
+                currentPage--;
+                displayPaginatedRecipes();
+            };
+            paginationDiv.appendChild(prevBtn);
+        }
+    
+        for (let i = 1; i <= totalPages; i++) {
+            const pageBtn = document.createElement("button");
+            pageBtn.textContent = i;
+            if (i === currentPage) pageBtn.disabled = true;
+            pageBtn.onclick = () => {
+                currentPage = i;
+                displayPaginatedRecipes();
+            };
+            paginationDiv.appendChild(pageBtn);
+        }
+    
+        if (currentPage < totalPages) {
+            const nextBtn = document.createElement("button");
+            nextBtn.textContent = "Next";
+            nextBtn.onclick = () => {
+                currentPage++;
+                displayPaginatedRecipes();
+            };
+            paginationDiv.appendChild(nextBtn);
+        }
+    
+        container.appendChild(paginationDiv);
+    }
+    
+    
 
     // Attach filter event listeners
     ["searchInput", "categoryFilter", "seasonFilter", "cuisineFilter", "dietaryFilter", "prepFilter", "difficultyFilter"].forEach(id => {
