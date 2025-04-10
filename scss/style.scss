@@ -487,6 +487,21 @@ footer {
     object-fit: contain;
 }
 
+.smoothScroll{
+    margin-top: 3%;
+    border: solid black;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+    width: auto;
+    max-width: 90%;
+    background-color: var(--secondary-color);
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
 
 
 
@@ -683,6 +698,7 @@ footer {
     vertical-align: top;
     background-color: var(--secondary-color);
     padding: 0px 40px;
+    padding-top: 30px;
     border: solid;
     border-radius: 20px;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
